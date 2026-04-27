@@ -10,10 +10,13 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  metadata: [
+  headTags: [
     {
-      name: 'algolia-site-verification',
-      content: 'A7415A5F5C154FC3',
+      tagName: 'meta',
+      attributes: {
+        name: 'algolia-site-verification',
+        content: 'A7415A5F5C154FC3',
+      },
     },
   ],
   title: 'My Product Docs',
