@@ -56,6 +56,13 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
+          includeCurrentVersion: true,
+          lastVersion: 'current',
+          versions: {
+            current: {
+              label: 'Latest',
+            },
+          },
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
@@ -91,6 +98,11 @@ const config = {
       colorMode: {
         respectPrefersColorScheme: true,
       },
+      algolia: {
+        appId: '32Z8X60GTF',
+        apiKey: 'fc157b78a383cee793c64aff6966d540',
+        indexName: 'my_docs',
+      },
       navbar: {
         title: 'My Site',
         logo: {
@@ -105,6 +117,10 @@ const config = {
             label: 'Tutorial',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
+          {
+            type: 'docsVersionDropdown',
+            position: 'right',
+          },
           {
             href: 'https://github.com/facebook/docusaurus',
             label: 'GitHub',
