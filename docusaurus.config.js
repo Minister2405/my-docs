@@ -40,6 +40,7 @@ const config = {
   projectName: 'docusaurus', // Usually your repo name.
 
   onBrokenLinks: 'throw',
+  themes: ['docusaurus-theme-openapi-docs'],
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -55,7 +56,8 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: './sidebars.js',
+          sidebarPath: require.resolve('./sidebars.js'),
+          routeBasePath: 'docs',
           includeCurrentVersion: true,
           lastVersion: 'current',
           versions: {
@@ -90,6 +92,25 @@ const config = {
     ],
   ],
 
+  plugins: [
+    [
+      'docusaurus-plugin-openapi-docs',
+      {
+        id: 'api',
+        docsPluginId: 'classic',
+        config: {
+          api: {
+            specPath: 'https://apihub.document360.io/swagger/v2/swagger.json',
+            outputDir: 'docs/api',
+            sidebarOptions: {
+              groupPathsBy: 'tag',
+            },
+          },
+        },
+      },
+    ],
+  ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -115,6 +136,12 @@ const config = {
             sidebarId: 'tutorialSidebar',
             position: 'left',
             label: 'Tutorial',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'api',
+            position: 'left',
+            label: 'API',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
