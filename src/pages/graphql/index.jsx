@@ -1,16 +1,10 @@
-import React, {useEffect} from 'react';
-import Layout from '@theme/Layout';
+import React from 'react';
 
-export default function GraphQLRedirect() {
-  useEffect(() => {
-    window.location.href = '/graphql/index.html';
-  }, []);
-
+export default function GraphQLPage() {
   return (
-    <Layout title="GraphQL API">
-      <main>
-        <p>Redirecting to GraphQL API documentation...</p>
-      </main>
-    </Layout>
+    <iframe
+      src="/graphql/index.html"
+      style={{ width: '100%', height: '100vh', border: 'none' }}
+    />
   );
 }
