@@ -1,10 +1,9 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 
 export default function GraphQLPage() {
-  return (
-    <iframe
-      src="/graphql/index.html"
-      style={{ width: '100%', height: '100vh', border: 'none' }}
-    />
-  );
+  useEffect(() => {
+    window.location.href = '/graphql/index.html';
+  }, []);
+
+  return <p>Redirecting to GraphQL docs...</p>;
 }
