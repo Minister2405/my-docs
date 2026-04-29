@@ -1,0 +1,19 @@
+{
+  "routes": [
+    {
+      "src": "^/graphql/?$",
+      "dest": "/graphql/index.html"
+    },
+    {
+      "src": "^/graphql/(.*)",
+      "dest": "/graphql/$1"
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/.*",
+      "dest": "/index.html"
+    }
+  ]
+}
