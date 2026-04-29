@@ -1,0 +1,9 @@
+introspection:
+  schemaFile: ./schema.graphql
+
+info:
+  title: Star Wars GraphQL API
+  description: GraphQL documentation generated with SpectaQL
+
+servers:
+  - url: https://swapi-graphql.netlify.app/graphql

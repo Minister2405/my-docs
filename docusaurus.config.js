@@ -144,6 +144,7 @@ const config = {
             label: 'API',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/graphql/index.html', label: 'GraphQL API', position: 'left'},
           {
             type: 'docsVersionDropdown',
             position: 'right',
