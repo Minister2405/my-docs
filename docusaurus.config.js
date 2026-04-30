@@ -151,6 +151,11 @@ const config = {
             target: '_blank',
           },
           {
+            to: '/async-api',
+            label: 'Async API',
+            position: 'left',
+          },
+          {
             type: 'docsVersionDropdown',
             position: 'right',
           },
