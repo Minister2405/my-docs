@@ -1,0 +1,17 @@
+asyncapi: 2.6.0
+info:
+  title: User Events API
+  version: 1.0.0
+
+channels:
+  user/signedup:
+    subscribe:
+      summary: User signed up event
+      message:
+        payload:
+          type: object
+          properties:
+            userId:
+              type: string
+            email:
+              type: string
